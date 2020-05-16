@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ language-dependend }}" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{{ description in less than 150 characters }}">
+    <meta name="keywords" content="{{ keywords list comma separated, 3-5 keywords }}">
+
+    {{ favicons https://realfavicongenerator.net/ }}
+
+    <title>{{ document-title }}</title>
+
+    <link rel="alternate" href="{{ link to same page but second language }}" hreflang="{{ second language }}">
+
+    {{ styles }}
+    {{ print styles }}
+    {{ scripts defered }}
+</head>
+
+<body>
+    <header class="header"><!-- partial -->
+        <section class="header__logo"></section> <!-- partial -->
+        <nav class="primary-nav"></nav> <!-- partial -->
+        <nav class="secondary-nav"> <!-- partial -->
+            <ul class="secondary-nav__menu"></ul>
+            <ul class="secondary-nav__language"></ul>
+        </nav>
+    </header>
+    <main class="main"><!-- partial -->
+        <section class="main__intro"></section> <!-- shortcode -->
+        <aside class="main__info">
+            <section class="main__info-global"></section> <!-- shortcode -->
+            <section class="main__info-page"></section> <!-- shortcode -->
+        </aside>
+        <aside class="main__toc"></aside> <!-- Hugo shortcode -->
+        <article class="main__content"></article> <!-- define 'main' -->
+    </main>
+    <footer class="footer"><!-- partial -->
+        <section class="footer__social"></section> <!-- partial -->
+        <section class="footer__location"></section> <!-- partial -->
+        <section class="footer__network"></section> <!-- partial -->
+        <section class="footer__footer-nav"></section> <!-- partial -->
+    </footer>
+</body>
+
+</html>
