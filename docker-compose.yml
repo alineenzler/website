@@ -3,6 +3,6 @@ services:
   hugo:
     build: ./docker/hugo
     ports:
-      - "1313:1313"
+      - "11111:11111"
     volumes:
       - ./src/hugo:/src/hugo

@@ -9,4 +9,4 @@ RUN tar -C /usr/local/bin -zxf ${TEMP_FOLDER}/${HUGO_BINARY}
 
 WORKDIR /src/hugo
 
-CMD hugo --bind="0.0.0.0" server
+CMD hugo --bind="0.0.0.0" --port=11111 server
