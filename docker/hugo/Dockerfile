@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:focal
 
 ARG HUGO_VERSION=0.70.0
 ARG HUGO_BINARY=hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
