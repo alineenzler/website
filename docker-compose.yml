@@ -1,8 +1,18 @@
 version: "3.8"
 services:
-  hugo:
-    build: ./docker/hugo
+  gildedernacht:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile-gildedernacht
     ports:
       - "11111:11111"
+    volumes:
+      - ./src/hugo:/src/hugo
+  spieltage:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile-spieltage
+    ports:
+      - "22222:22222"
     volumes:
       - ./src/hugo:/src/hugo

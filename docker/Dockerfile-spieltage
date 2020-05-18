@@ -1,0 +1,12 @@
+FROM ubuntu:focal
+
+ARG HUGO_VERSION=0.70.0
+ARG HUGO_BINARY=hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+ARG TEMP_FOLDER=/tmp
+
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} ${TEMP_FOLDER}
+RUN tar -C /usr/local/bin -zxf ${TEMP_FOLDER}/${HUGO_BINARY}
+
+WORKDIR /src/hugo
+
+CMD hugo --bind="0.0.0.0" --port=22222 server
